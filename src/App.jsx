@@ -1,5 +1,6 @@
 import "./App.css";
 import Card from "./components/Card";
+import Contact from "./components/Contact";
 
 function App() {
   const handleClick = () => {};
@@ -16,10 +17,12 @@ function App() {
             >
               Download Resume
             </a>
-            <button className="contactButton">Contact Me</button>
+            {/* <button className="contactButton">Contact Me</button> */}
           </Card>
         </div>
-        <div className="everything-else"></div>
+        <div className="everything-else">
+          <Contact />
+        </div>
       </div>
     </>
   );
