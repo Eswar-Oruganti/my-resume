@@ -1,6 +1,7 @@
 import "./App.css";
 import Card from "./components/Card";
 import Contact from "./components/Contact";
+import Experience from "./components/Experience";
 
 function App() {
   const handleClick = () => {};
@@ -20,7 +21,8 @@ function App() {
             {/* <button className="contactButton">Contact Me</button> */}
           </Card>
         </div>
-        <div className="everything-else">
+        <div className="details">
+          <Experience />
           <Contact />
         </div>
       </div>

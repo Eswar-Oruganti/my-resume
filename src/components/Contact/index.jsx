@@ -23,24 +23,27 @@ export default function Contact() {
   }
 
   return (
-    <form
-      name="contact"
-      method="POST"
-      data-netlify="true"
-      onSubmit={handleSubmit}
-      className={styles.contactForm}
-    >
-      <input type="hidden" name="form-name" value="contact" />
-      <input name="name" placeholder="Name" required />
-      <input name="email" placeholder="Email" type="email" required />
-      <textarea
-        name="message"
-        placeholder="Message"
-        rows={7}
-        maxLength={750}
-        required
-      />
-      <button type="submit">Send Message</button>
-    </form>
+    <div>
+      <h6 className="h-level-2">Contact</h6>
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        onSubmit={handleSubmit}
+        className={styles.contactForm}
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <input name="name" placeholder="Name" required />
+        <input name="email" placeholder="Email" type="email" required />
+        <textarea
+          name="message"
+          placeholder="Message"
+          rows={7}
+          maxLength={750}
+          required
+        />
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   );
 }

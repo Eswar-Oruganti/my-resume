@@ -1,0 +1,35 @@
+.cardContainer {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardTitle {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.cardCompany {
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.jobDurationCard {
+  padding: 8px 12px;
+}
+
+.cardDesc {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
