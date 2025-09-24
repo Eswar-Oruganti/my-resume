@@ -1,0 +1,42 @@
+.contactButton {
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--color-accent);
+  color: var(--color-text-contrast);
+}
+
+.profileName {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+.profileFooter {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.downloadResumeLink {
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+  color: var(--color-text);
+  padding: 8px 16px;
+  background-color: rgba(var(--color-bg-secondary), 0.5);
+  border-radius: 8px;
+  border: 0;
+}
+
+@media (min-width: 480px) {
+  .profileFooter {
+    grid-template-columns: 1fr 1fr;
+  }
+}
