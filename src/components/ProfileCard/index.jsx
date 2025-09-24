@@ -3,7 +3,7 @@ import styles from "./ProfileCard.module.css";
 
 export default function ProfileCard() {
   return (
-    <Card>
+    <Card className={styles.profileCard}>
       <h1 className={styles.profileName}>Eswar Oruganti</h1>
       <div className={styles.profileFooter}>
         <a

@@ -2,20 +2,20 @@ import "./App.css";
 import Contact from "./components/Contact";
 import Experience from "./components/Experience";
 import ProfileCard from "./components/ProfileCard";
-import Slidein from "./components/SlideIn/Slidein";
+import SlideIn from "./components/SlideIn/Slidein";
 
 function App() {
   return (
     <>
-      <div className="container">
-        <Slidein>
+      <SlideIn>
+        <div className="container">
           <ProfileCard />
-        </Slidein>
-        <div className="details">
-          <Experience />
-          <Contact />
+          <div className="details">
+            <Experience />
+            <Contact />
+          </div>
         </div>
-      </div>
+      </SlideIn>
     </>
   );
 }
