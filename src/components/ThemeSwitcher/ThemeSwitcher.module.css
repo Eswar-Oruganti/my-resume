@@ -1,0 +1,50 @@
+.trigger {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--color-accent);
+  color: var(--color-text-contrast);
+}
+
+.DialogContainer {
+  position: relative;
+  z-index: 10;
+  outline: none;
+  background: var(--color-secondary);
+}
+
+.DialogContent {
+  position: fixed;
+  z-index: 10;
+  right: 24px;
+  bottom: 64px;
+  background: var(--color-secondary);
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.DialogContainer:focus {
+  outline: none;
+}
+
+.ThemeSelector {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+}
+
+.ThemeSelector button {
+  padding: 4px;
+  outline: none;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: 14px;
+}

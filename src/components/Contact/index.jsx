@@ -42,7 +42,9 @@ export default function Contact() {
           maxLength={750}
           required
         />
-        <button type="submit">Send Message</button>
+        <button type="submit" className={styles.submitButton}>
+          Send Message
+        </button>
       </form>
     </div>
   );
