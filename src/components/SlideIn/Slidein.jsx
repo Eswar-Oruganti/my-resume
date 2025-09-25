@@ -5,6 +5,7 @@ export default function SlideIn({
   duration = 0.5,
   distance = 20,
   delay = 0,
+  ...rest
 }) {
   return (
     <motion.div
@@ -12,6 +13,7 @@ export default function SlideIn({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration, delay }}
       viewport={{ once: true }}
+      {...rest}
     >
       {children}
     </motion.div>

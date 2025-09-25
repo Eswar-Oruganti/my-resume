@@ -1,3 +1,7 @@
+.contactContainer {
+  margin-top: 40px;
+}
+
 .contactForm {
   display: flex;
   flex-direction: column;

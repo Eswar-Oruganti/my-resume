@@ -20,15 +20,19 @@ function App() {
   }, []);
   return (
     <>
-      <SlideIn>
-        <div className="container">
+      <div className="container">
+        <SlideIn>
           <ProfileCard />
-          <div className="details">
+        </SlideIn>
+        <div className="details">
+          <SlideIn>
             <Experience />
+
             <Contact />
-          </div>
+          </SlideIn>
         </div>
-      </SlideIn>
+      </div>
+
       <ThemeSwitcher />
     </>
   );

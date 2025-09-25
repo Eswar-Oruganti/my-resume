@@ -23,7 +23,7 @@ export default function Contact() {
   }
 
   return (
-    <div>
+    <div className={styles.contactContainer}>
       <h6 className="h-level-2">Contact</h6>
       <form
         name="contact"

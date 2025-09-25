@@ -26,11 +26,18 @@ export default function Experience() {
   return (
     <div>
       <h6 className="h-level-2">Experience</h6>
-      <div className={styles.cardContainer}>
+
+      <SlideIn
+        className={styles.cardContainer}
+        variants={{
+          hidden: {},
+          visible: { transition: { staggerChildren: 0.5 } },
+        }}
+      >
         {experienceDetails.map((item) => (
           <ExperienceCard {...item} key={item.id} />
         ))}
-      </div>
+      </SlideIn>
     </div>
   );
 }
@@ -38,23 +45,21 @@ export default function Experience() {
 const ExperienceCard = (props) => {
   const { startYear, endYear, description, company, title } = props;
   return (
-    <SlideIn>
-      <Card>
-        <div className={styles.cardHeader}>
-          <div>
-            <p className={styles.cardTitle}>{title}</p>
-            <p className={styles.cardCompany}>{company}</p>
-          </div>
+    <Card>
+      <div className={styles.cardHeader}>
+        <div>
+          <p className={styles.cardTitle}>{title}</p>
+          <p className={styles.cardCompany}>{company}</p>
+        </div>
 
-          <Card className={styles.jobDurationCard}>
-            {startYear} - {endYear}
-          </Card>
-        </div>
-        <div></div>
-        <div className={styles.cardDesc}>
-          <p>{description}</p>
-        </div>
-      </Card>
-    </SlideIn>
+        <Card className={styles.jobDurationCard}>
+          {startYear} - {endYear}
+        </Card>
+      </div>
+      <div></div>
+      <div className={styles.cardDesc}>
+        <p>{description}</p>
+      </div>
+    </Card>
   );
 };

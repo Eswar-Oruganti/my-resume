@@ -1,18 +1,27 @@
 .container {
-  padding: 24px;
+  height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
   gap: 40px;
+  overflow: hidden;
+  padding: 0 24px;
 }
 
-.details > * + * {
-  margin-top: 40px;
+.details {
+  padding: 40px 0 80px 0;
+  max-height: 100%;
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.details::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 @media (min-width: 1080px) {
   .container {
     grid-template-columns: 360px 1fr;
-    padding: 40px 80px;
     gap: 32px;
   }
 }
