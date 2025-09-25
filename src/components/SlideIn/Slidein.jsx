@@ -11,6 +11,7 @@ export default function SlideIn({
       initial={{ opacity: 0, y: distance }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration, delay }}
+      viewport={{ once: true }}
     >
       {children}
     </motion.div>

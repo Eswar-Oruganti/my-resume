@@ -1,5 +1,5 @@
-import styles from "./Contact.module.css";
 import { useState } from "react";
+import styles from "./Contact.module.css";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
