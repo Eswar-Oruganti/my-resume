@@ -10,10 +10,10 @@
 
 [data-theme="blue"] {
   --color-bg: #00d4ff; /* main background */
-  --color-secondary: #009ec0; /* darker shade of bg */
+  --color-secondary: #b3f4ff; /* darker shade of bg */
   --color-text: #00222b; /* dark text on bright background */
   --color-text-contrast: white; /* contrasting text if needed */
-  --color-text-secondary: #003f4d; /* muted secondary text */
+  --color-text-secondary: #001318; /* muted secondary text */
   --color-border: #1a90b0; /* border slightly darker */
   --color-accent: #004d80; /* strong accent on blue */
 }
@@ -30,7 +30,6 @@ body {
   box-sizing: border-box;
   background: var(--color-bg);
   color: var(--color-text);
-  overflow: hidden;
 }
 
 .h-level-2 {

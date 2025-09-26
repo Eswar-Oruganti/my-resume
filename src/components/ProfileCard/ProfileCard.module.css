@@ -1,7 +1,6 @@
 .profileCard {
-  height: fit-content;
-  position: sticky;
-  top: 40px;
+  position: relative;
+  margin-top: 40px;
 }
 
 .contactButton {
@@ -44,5 +43,13 @@
 @media (min-width: 480px) {
   .profileFooter {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1080px) {
+  .profileCard {
+    position: sticky;
+    top: 40px;
+    align-self: flex-start;
   }
 }

@@ -21,9 +21,8 @@ function App() {
   return (
     <>
       <div className="container">
-        <SlideIn>
-          <ProfileCard />
-        </SlideIn>
+        <ProfileCard />
+
         <div className="details">
           <SlideIn>
             <Experience />

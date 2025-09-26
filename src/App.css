@@ -1,27 +1,30 @@
 .container {
-  height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
   gap: 40px;
-  overflow: hidden;
   padding: 0 24px;
 }
 
 .details {
-  padding: 40px 0 80px 0;
-  max-height: 100%;
-  overflow-y: auto;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE 10+ */
-}
-
-.details::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  padding: 40px 0 120px 0;
 }
 
 @media (min-width: 1080px) {
   .container {
+    height: 100vh;
     grid-template-columns: 360px 1fr;
     gap: 32px;
+    /* overflow: hidden; */
+  }
+
+  .details {
+    max-height: 100%;
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+  }
+
+  .details::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
   }
 }
