@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { motion, useAnimate } from "framer-motion";
 
 import Contact from "./components/Contact";
 import Experience from "./components/Experience";
@@ -9,11 +10,11 @@ import "./App.css";
 
 function App() {
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
+    const theme = localStorage.getItem("theme");
     const htmlElement = document.documentElement;
 
-    if (savedTheme === "blue") {
-      htmlElement.setAttribute("data-theme", "blue");
+    if (theme) {
+      htmlElement.setAttribute("data-theme", theme);
     } else {
       htmlElement.removeAttribute("data-theme");
     }
@@ -22,11 +23,9 @@ function App() {
     <>
       <div className="container">
         <ProfileCard />
-
         <div className="details">
           <SlideIn>
             <Experience />
-
             <Contact />
           </SlideIn>
         </div>

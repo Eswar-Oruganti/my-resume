@@ -18,6 +18,26 @@
   --color-accent: #004d80; /* strong accent on blue */
 }
 
+[data-theme="red"] {
+  --color-bg: #ff2b2b; /* main background */
+  --color-secondary: #ffb3b3; /* lighter card background */
+  --color-text: #2b0000; /* dark text for contrast */
+  --color-text-contrast: white; /* contrasting text if needed */
+  --color-text-secondary: #330000; /* muted secondary text */
+  --color-border: #b01a1a; /* border slightly darker */
+  --color-accent: #800000; /* strong accent for buttons/clickables */
+}
+
+[data-theme="purple"] {
+  --color-bg: #9b30ff; /* main background */
+  --color-secondary: #d7b3ff; /* lighter card background */
+  --color-text: #1e0033; /* dark text for contrast */
+  --color-text-contrast: white; /* contrasting text if needed */
+  --color-text-secondary: #12001f; /* muted secondary text */
+  --color-border: #6a1ab0; /* border slightly darker */
+  --color-accent: #4d0080; /* strong accent for buttons/clickables */
+}
+
 * {
   margin: 0;
   padding: 0;

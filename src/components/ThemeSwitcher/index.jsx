@@ -2,20 +2,16 @@ import { Dialog, DialogPanel } from "@headlessui/react";
 import { useState } from "react";
 import styles from "./ThemeSwitcher.module.css";
 
+import ThemeSwitcherCanvasThree from "../../three/ThemeSwitcherOrb";
+
 export default function ThemeSwitcher() {
   let [isOpen, setIsOpen] = useState(false);
 
   const handleThemeChange = (theme) => {
     let htmlElement = document.documentElement;
     localStorage.setItem("theme", theme);
+    htmlElement.setAttribute("data-theme", theme);
     setIsOpen(false);
-    setTimeout(() => {
-      if (theme === "blue") {
-        htmlElement.setAttribute("data-theme", "blue");
-      } else {
-        htmlElement.removeAttribute("data-theme");
-      }
-    }, 500);
   };
 
   return (
@@ -31,10 +27,33 @@ export default function ThemeSwitcher() {
         <div className={styles.DialogContent}>
           <DialogPanel className="">
             <p>Select Theme</p>
-            <div className={styles.ThemeSelector}>
-              <button onClick={() => handleThemeChange("base")}>Base </button>
-              <button onClick={() => handleThemeChange("blue")}>Blue</button>
+            <div>
+              <div
+                className={styles.themeGroup}
+                tabIndex={1}
+                onClick={() => handleThemeChange("blue")}
+              >
+                <p>Cursed Technique - Blue</p>
+                <ThemeSwitcherCanvasThree />
+              </div>
+              <div
+                className={styles.themeGroup}
+                tabIndex={1}
+                onClick={() => handleThemeChange("red")}
+              >
+                <p>Curset Technique Reversal - Red</p>
+                <ThemeSwitcherCanvasThree emissiveColor="#ff2b2b" />
+              </div>
+              <div
+                className={styles.themeGroup}
+                tabIndex={1}
+                onClick={() => handleThemeChange("purple")}
+              >
+                <p>Hollow Purple</p>
+                <ThemeSwitcherCanvasThree emissiveColor="#9b30ff" />
+              </div>
             </div>
+            <div className={styles.ThemeSelector}></div>
           </DialogPanel>
         </div>
       </Dialog>
